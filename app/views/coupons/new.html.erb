@@ -1,0 +1,10 @@
+<h1>Coupon Form</h1>
+<%= form_tag(coupons_path method: "post")%>
+<%=fields_for :coupon do |ff|%>
+<%=ff.label(:coupon_code, "Coupon Code: ")%>
+<%=ff.text_field(:coupon_code)%>
+<%=ff.label(:store, "Store: ")%>
+<%=ff.text_field(:store)%>
+<%=ff.submit("Submit Coupon", class: "Submit Coupon")%>
+<%end%>
+
